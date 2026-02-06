@@ -58,8 +58,8 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onCtaClick }) =>
               <p className="text-xs text-gray-400 uppercase tracking-widest">Alerta Financeiro</p>
             </div>
             <p className="font-mono text-sm">
-              > Gastos invisíveis detectados.<br/>
-              > Vazamento: R$ 850,00/mês.
+              &gt; Gastos invisíveis detectados.<br/>
+              &gt; Vazamento: R$ 850,00/mês.
             </p>
           </div>
         </div>
