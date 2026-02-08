@@ -47,7 +47,20 @@ export const Pricing: React.FC<PricingProps> = ({ onCtaClick }) => {
         </div>
         
         <div className="p-8">
-          <p className="text-center text-gray-400 text-sm mb-6 uppercase tracking-widest">Você recebe acesso imediato a:</p>
+          
+          {/* Product Mockup Image */}
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="https://drive.google.com/thumbnail?id=1a9VjG8ACuzS2pmCr7UULPSdxwGGIIz1s&sz=w1000" 
+              alt="Pack 10k em Silêncio Mockup" 
+              className="w-full max-w-[280px] h-auto rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+
+          <p className="text-center text-gray-400 text-sm mb-6 uppercase tracking-widest font-semibold">
+            Você recebe acesso imediato a:
+          </p>
           
           <ul className="space-y-4 mb-8">
             {inclusions.map((item, i) => (
