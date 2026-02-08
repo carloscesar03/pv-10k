@@ -11,7 +11,7 @@ import { Footer } from './components/Footer';
 
 // --- CONFIGURAÇÃO ---
 // Coloque o link do seu checkout (Kiwify, Hotmart, Eduzz) aqui entre as aspas:
-const CHECKOUT_URL = "https://pay.kiwify.com.br/SEU-LINK-AQUI"; 
+const CHECKOUT_URL = "https://pay.wiapy.com/6CANs0O7lq"; 
 
 const App: React.FC = () => {
   
@@ -24,7 +24,7 @@ const App: React.FC = () => {
 
   const handleCheckout = () => {
     // Redireciona o usuário para o checkout em uma nova aba
-    if (CHECKOUT_URL && CHECKOUT_URL !== "https://pay.kiwify.com.br/SEU-LINK-AQUI") {
+    if (CHECKOUT_URL) {
       window.open(CHECKOUT_URL, '_blank');
     } else {
       console.log("Link de checkout não configurado. Adicione-o no arquivo App.tsx");
@@ -35,11 +35,11 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen font-sans text-gray-200 overflow-x-hidden selection:bg-brand-green selection:text-black">
       
-      <Hero onCtaClick={scrollToPricing} />
+      <Hero onCtaClick={handleCheckout} />
       
       <Features />
 
-      <ProblemSection onCtaClick={scrollToPricing} />
+      <ProblemSection onCtaClick={handleCheckout} />
 
       <TargetAudience />
 
@@ -51,7 +51,7 @@ const App: React.FC = () => {
 
       <FAQ />
 
-      <Footer onCtaClick={scrollToPricing} />
+      <Footer onCtaClick={handleCheckout} />
       
     </div>
   );
