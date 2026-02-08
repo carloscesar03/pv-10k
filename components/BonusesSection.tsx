@@ -56,11 +56,11 @@ export const BonusesSection: React.FC = () => {
             <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 rounded-xl border-l-4 border-brand-green relative overflow-hidden group hover:bg-slate-800 transition-colors">
               <div className="absolute top-0 right-0 bg-brand-green text-black text-xs font-bold px-2 py-1 z-10">INCLUSO</div>
               <div className="flex flex-col sm:flex-row items-center gap-5">
-                <div className="flex-shrink-0 w-full sm:w-28 h-auto">
+                <div className="flex-shrink-0 w-full sm:w-28">
                   <img 
-                    src="https://drive.google.com/thumbnail?id=1WLKA73MTxNuLGUWRKSJS0U6R9GqSrTdk&sz=w1000" 
+                    src="https://drive.google.com/thumbnail?id=10NRgHqWhrKA9HXaHbGfpi8z6wzm5-kFW&sz=w1000" 
                     alt="Calculadora de Metas Mockup" 
-                    className="w-full h-auto rounded-lg shadow-lg border border-white/5 transform group-hover:scale-105 transition-transform duration-300 object-cover"
+                    className="w-full aspect-square rounded-lg shadow-lg border border-white/5 transform group-hover:scale-105 transition-transform duration-300 object-cover"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                   />
@@ -76,11 +76,11 @@ export const BonusesSection: React.FC = () => {
             <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 rounded-xl border-l-4 border-brand-green relative overflow-hidden group hover:bg-slate-800 transition-colors">
               <div className="absolute top-0 right-0 bg-brand-green text-black text-xs font-bold px-2 py-1 z-10">INCLUSO</div>
               <div className="flex flex-col sm:flex-row items-center gap-5">
-                <div className="flex-shrink-0 w-full sm:w-28 h-auto">
+                <div className="flex-shrink-0 w-full sm:w-28">
                    <img 
-                    src="https://drive.google.com/thumbnail?id=1YQTx_UgYAxqbXYUTHRRrYlrLpDETaUhd&sz=w1000" 
+                    src="https://drive.google.com/thumbnail?id=1BkVfqAy5glX9ZIk1-EAxpuSIzEl2vi37&sz=w1000" 
                     alt="Guardião do Bolso Mockup" 
-                    className="w-full h-auto rounded-lg shadow-lg border border-white/5 transform group-hover:scale-105 transition-transform duration-300 object-cover"
+                    className="w-full aspect-square rounded-lg shadow-lg border border-white/5 transform group-hover:scale-105 transition-transform duration-300 object-cover"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                   />
@@ -96,11 +96,11 @@ export const BonusesSection: React.FC = () => {
             <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 rounded-xl border-l-4 border-brand-green relative overflow-hidden group hover:bg-slate-800 transition-colors">
               <div className="absolute top-0 right-0 bg-brand-green text-black text-xs font-bold px-2 py-1 z-10">INCLUSO</div>
               <div className="flex flex-col sm:flex-row items-center gap-5">
-                <div className="flex-shrink-0 w-full sm:w-28 h-auto">
+                <div className="flex-shrink-0 w-full sm:w-28">
                   <img 
-                    src="https://drive.google.com/thumbnail?id=1mZOSJWRYCmdicBK8HIYoOYORz78C_ziH&sz=w1000" 
+                    src="https://drive.google.com/thumbnail?id=18uycb2cI5TzVuOiSkYV-rJNIdEn4YWq2&sz=w1000" 
                     alt="Gerador de NÃO Mockup" 
-                    className="w-full h-auto rounded-lg shadow-lg border border-white/5 transform group-hover:scale-105 transition-transform duration-300 object-cover"
+                    className="w-full aspect-square rounded-lg shadow-lg border border-white/5 transform group-hover:scale-105 transition-transform duration-300 object-cover"
                     referrerPolicy="no-referrer"
                     onError={handleImageError}
                   />
