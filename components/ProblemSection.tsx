@@ -47,7 +47,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onCtaClick }) =>
                 <TrendingDown className="text-red-500 shrink-0" />
                 <div>
                   <h4 className="font-bold text-white text-sm">Ciclo da Sobrevivência</h4>
-                  <p className="text-xs text-gray-500 mt-1">Trabalha > Paga > Fica Zero.</p>
+                  <p className="text-xs text-gray-500 mt-1">Trabalha → Paga → Fica Zero.</p>
                 </div>
              </div>
           </div>
