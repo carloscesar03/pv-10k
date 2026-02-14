@@ -19,6 +19,16 @@ export default {
           accent: '#112211'
         }
       },
+      animation: {
+        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
+      },
       backgroundImage: {
         'grid-pattern': "linear-gradient(to right, #111 1px, transparent 1px), linear-gradient(to bottom, #111 1px, transparent 1px)",
       }
