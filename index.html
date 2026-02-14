@@ -4,98 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Protocolo 10k em Silêncio - O Fim da Fragilidade Financeira</title>
-    <meta name="description" content="Não é sobre cortar o cafezinho. É sobre hackear o sistema que te mantém pobre. Acesse o protocolo agora." />
-    
-    <!-- Facebook Domain Verification -->
-    <meta name="facebook-domain-verification" content="97b59ttweb1gg0tsu2x1kirazi2mvo" />
+    <meta
+      name="description"
+      content="Não é sobre cortar o cafezinho. É sobre hackear o sistema que te mantém pobre. Acesse o protocolo agora."
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <!-- ========================================== -->
-    <!-- ÁREA DO PIXEL DO FACEBOOK / META ADS       -->
+    <!-- Facebook Domain Verification -->
+    <meta
+      name="facebook-domain-verification"
+      content="97b59ttweb1gg0tsu2x1kirazi2mvo"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2114828405998770');
-    fbq('track', 'PageView');
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script",
+        "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "2114828405998770");
+      fbq("track", "PageView");
     </script>
     <!-- End Meta Pixel Code -->
-    <!-- FIM DA ÁREA DO PIXEL                       -->
-    <!-- ========================================== -->
 
-    <!-- Tailwind CSS via CDN como fallback -->
-    
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Outfit', 'sans-serif'],
-            },
-            colors: {
-              brand: {
-                green: '#00FF66',
-                dark: '#050505',
-                card: '#0F0F0F',
-                border: '#222222',
-                accent: '#112211'
-              }
-            },
-            animation: {
-              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              }
-            },
-            backgroundImage: {
-              'grid-pattern': "linear-gradient(to right, #111 1px, transparent 1px), linear-gradient(to bottom, #111 1px, transparent 1px)",
-            }
-          }
-        }
-      }
-    </script>
+    <!-- CSS gerado pelo Vite -->
+    <link rel="stylesheet" href="/index.css" />
+  </head>
 
-    <style>
-      body {
-        background-color: #050505;
-        color: #e5e5e5;
-        margin: 0;
-        overflow-x: hidden;
-      }
-      .glow-text {
-        text-shadow: 0 0 30px rgba(0, 255, 102, 0.4);
-      }
-      .grid-bg {
-        background-size: 40px 40px;
-        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-        -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-      }
-    </style>
-  
-<link rel="stylesheet" href="/index.css">
-</head>
   <body>
-    <!-- Meta Pixel Code (noscript) -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2114828405998770&amp;ev=PageView&amp;noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code (noscript) -->
+    <!-- Meta Pixel (noscript) -->
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2114828405998770&ev=PageView&noscript=1"
+      />
+    </noscript>
 
     <div id="root"></div>
+
+    <!-- Entrada do React via Vite -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
