@@ -42,7 +42,6 @@ export const Button: React.FC<ButtonProps> = ({
         {showIcon && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
       </span>
       
-      {/* Brilho interno animado no hover */}
       {variant === 'primary' && (
         <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
       )}

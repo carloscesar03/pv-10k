@@ -43,7 +43,6 @@ export const BonusesSection: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {bonuses.map((bonus, i) => (
             <div key={i} className="group relative bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-brand-green/30 transition-all duration-300">
-              {/* Image Container */}
               <div className="aspect-video bg-black relative overflow-hidden">
                 <div className="absolute inset-0 bg-brand-green/10 mix-blend-overlay z-10"></div>
                 <img 

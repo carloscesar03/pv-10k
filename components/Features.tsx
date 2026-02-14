@@ -54,7 +54,6 @@ export const Features: React.FC = () => {
               ${idx === 4 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''}
             `}
           >
-            {/* Hover Glow */}
             <div className="absolute inset-0 bg-brand-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             <div className="relative z-10">

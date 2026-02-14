@@ -1,8 +1,9 @@
 import React from 'react';
 import { Section } from './Section';
 import { Star, CheckCircle2, Quote } from 'lucide-react';
+import { TestimonialItem } from '../types';
 
-const testimonials = [
+const testimonials: TestimonialItem[] = [
   {
     name: "Gustavo Mendes",
     role: "Motorista de App",
@@ -29,7 +30,6 @@ const testimonials = [
 export const Testimonials: React.FC = () => {
   return (
     <Section className="bg-[#050505] border-t border-brand-border relative overflow-hidden">
-      {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-full bg-brand-green/5 blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="relative z-10">
@@ -46,12 +46,10 @@ export const Testimonials: React.FC = () => {
           {testimonials.map((t, i) => (
             <div key={i} className="relative group bg-[#0F0F0F] p-8 rounded-2xl border border-white/5 hover:border-brand-green/30 transition-all duration-300 hover:-translate-y-2">
               
-              {/* Quote Icon */}
               <div className="absolute top-6 right-6 text-brand-green/10 group-hover:text-brand-green/20 transition-colors">
                 <Quote size={48} />
               </div>
 
-              {/* Header */}
               <div className="flex items-center gap-4 mb-6">
                 <img 
                   src={t.image} 
@@ -62,17 +60,15 @@ export const Testimonials: React.FC = () => {
                   <h4 className="font-bold text-white text-lg leading-none">{t.name}</h4>
                   <p className="text-xs text-gray-500 mt-1 uppercase tracking-wide">{t.role}</p>
                   <div className="flex text-brand-green mt-1">
-                    {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="currentColor" />)}
+                    {[...Array(5)].map((_, idx) => <Star key={idx} size={12} fill="currentColor" />)}
                   </div>
                 </div>
               </div>
 
-              {/* Content */}
               <p className="text-gray-300 mb-6 leading-relaxed relative z-10">
                 "{t.content}"
               </p>
 
-              {/* Result Badge */}
               <div className="pt-6 border-t border-white/5">
                 <div className="flex items-center gap-2 text-brand-green text-sm font-bold bg-brand-green/5 py-2 px-3 rounded-lg border border-brand-green/10 w-fit">
                   <CheckCircle2 size={16} />
@@ -80,7 +76,6 @@ export const Testimonials: React.FC = () => {
                 </div>
               </div>
 
-              {/* Verified Badge */}
               <div className="absolute top-0 right-0 bg-brand-green text-black text-[10px] font-bold px-2 py-1 rounded-bl-lg rounded-tr-lg opacity-80">
                 VERIFICADO
               </div>

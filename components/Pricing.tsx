@@ -13,7 +13,6 @@ export const Pricing: React.FC<PricingProps> = ({ onCtaClick }) => {
       
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         
-        {/* Left Side: The Value Stack (Logic) */}
         <div className="order-2 lg:order-1">
           <h3 className="font-display text-3xl font-bold text-white mb-6">
             O preço da ignorância é alto.
@@ -38,14 +37,11 @@ export const Pricing: React.FC<PricingProps> = ({ onCtaClick }) => {
           </div>
         </div>
 
-        {/* Right Side: The Offer Card (Emotion) */}
         <div className="order-1 lg:order-2 relative">
-          {/* Neon Glow Behind */}
           <div className="absolute inset-0 bg-brand-green blur-[60px] opacity-20"></div>
 
           <div className="relative bg-[#0F0F0F] border border-brand-green rounded-3xl overflow-hidden shadow-2xl shadow-brand-green/20">
             
-            {/* Header */}
             <div className="bg-brand-green p-3 text-center">
               <span className="text-black font-black text-xs uppercase tracking-[0.2em]">Oferta por Tempo Limitado</span>
             </div>

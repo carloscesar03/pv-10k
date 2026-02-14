@@ -9,12 +9,10 @@ interface ProblemSectionProps {
 export const ProblemSection: React.FC<ProblemSectionProps> = ({ onCtaClick }) => {
   return (
     <div className="bg-[#080808] py-20 md:py-32 relative overflow-hidden">
-      {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center relative z-10">
         
-        {/* Lado Esquerdo - A Verdade Crua */}
         <div className="space-y-8">
           <div className="inline-block px-3 py-1 bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold uppercase tracking-widest rounded">
             Diagnóstico Brutal
@@ -59,7 +57,6 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onCtaClick }) =>
           </Button>
         </div>
         
-        {/* Lado Direito - Imagem Impactante */}
         <div className="relative group">
           <div className="absolute inset-0 bg-brand-green/20 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
           <div className="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card shadow-2xl">
@@ -69,7 +66,6 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onCtaClick }) =>
               className="w-full h-auto object-cover opacity-100"
             />
             
-            {/* Overlay de "Falha no Sistema" */}
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/90 to-transparent">
               <div className="flex items-center gap-2 text-red-500 font-mono text-sm mb-1">
                 <AlertTriangle size={14} />
