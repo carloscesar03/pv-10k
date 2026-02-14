@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
+import { AlertTriangle, TrendingDown, EyeOff } from 'lucide-react';
 
 interface ProblemSectionProps {
   onCtaClick: () => void;
@@ -7,57 +8,75 @@ interface ProblemSectionProps {
 
 export const ProblemSection: React.FC<ProblemSectionProps> = ({ onCtaClick }) => {
   return (
-    <div className="bg-[#0A0A0A] border-y border-brand-border py-20">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-        <div className="order-2 md:order-1 space-y-6 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            Ninguém te ensinou a gerenciar dinheiro. <br/>
-            <span className="text-red-500">O sistema estimula o gasto.</span>
-          </h2>
-          
-          <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
-            <p>
-              Você trabalha duro todos os dias. Mas, muitas vezes, sente que o dinheiro não rende como deveria.
-            </p>
-            <p>
-              Isso não acontece por falta de esforço, mas porque pequenas despesas invisíveis drenam seu orçamento antes que você perceba.
-            </p>
-            <p>
-              Planilhas complexas e restrições extremas raramente funcionam a longo prazo. Você precisa de um método que se adapte à sua rotina.
-            </p>
-            <div className="inline-block md:block text-left pl-4 pr-6 border-l-4 border-brand-green py-2 bg-brand-green/5 my-6 rounded-r-lg">
-              <p className="text-white italic font-medium">
-                "O segredo não é apenas disciplina, é ter as ferramentas certas de controle."
-              </p>
-            </div>
-            <p>
-              O Protocolo 10k em Silêncio foi desenhado para ajudar você a identificar para onde seu dinheiro está indo e redirecioná-lo para suas metas, de forma organizada e constante.
-            </p>
+    <div className="bg-[#080808] py-20 md:py-32 relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/5 blur-[100px] rounded-full pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center relative z-10">
+        
+        {/* Lado Esquerdo - A Verdade Crua */}
+        <div className="space-y-8">
+          <div className="inline-block px-3 py-1 bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold uppercase tracking-widest rounded">
+            Diagnóstico Brutal
           </div>
           
-          <Button onClick={onCtaClick} className="mt-8">
-            QUERO ORGANIZAR MINHAS FINANÇAS
+          <h2 className="font-display font-black text-3xl md:text-5xl text-white leading-tight">
+            Você não é desorganizado.<br/>
+            <span className="text-gray-500">Você está sendo manipulado.</span>
+          </h2>
+          
+          <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
+            <p>
+              Toda vez que você abre o Instagram ou entra no shopping, existe uma equipe de 50 engenheiros comportamentais ganhando milhões para fazer você gastar o que não tem.
+            </p>
+            <p className="border-l-4 border-red-500 pl-4 text-white font-medium">
+              É uma guerra desleal. Seu cérebro primitivo contra o algoritmo deles.
+            </p>
+            <p>
+              Tentar "se controlar" apenas com força de vontade é como tentar parar um trem com as mãos. Você vai falhar. Você precisa de uma <strong>arma</strong>.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+             <div className="bg-white/5 p-4 rounded-lg border border-white/10 flex items-start gap-3">
+                <EyeOff className="text-red-500 shrink-0" />
+                <div>
+                  <h4 className="font-bold text-white text-sm">Gastos Invisíveis</h4>
+                  <p className="text-xs text-gray-500 mt-1">Drenam 30% da sua renda sem aviso.</p>
+                </div>
+             </div>
+             <div className="bg-white/5 p-4 rounded-lg border border-white/10 flex items-start gap-3">
+                <TrendingDown className="text-red-500 shrink-0" />
+                <div>
+                  <h4 className="font-bold text-white text-sm">Ciclo da Sobrevivência</h4>
+                  <p className="text-xs text-gray-500 mt-1">Trabalha > Paga > Fica Zero.</p>
+                </div>
+             </div>
+          </div>
+          
+          <Button onClick={onCtaClick} pulse showIcon className="mt-8 w-full md:w-auto text-lg shadow-[0_0_40px_rgba(0,255,102,0.2)]">
+            EU QUERO SAIR DO CICLO AGORA
           </Button>
         </div>
         
-        <div className="order-1 md:order-2 relative h-full min-h-[400px]">
-          {/* Visual Abstract Representation of 'Leaking Money' or Stress */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-brand-green/20 to-transparent rounded-2xl opacity-50 blur-2xl"></div>
-          <img 
-            src="https://drive.google.com/thumbnail?id=1cNiBhh4Fnbps6Dbb6V2Zemcm7p2Z9AzK&sz=w1000" 
-            alt="Pessoa analisando finanças" 
-            className="relative z-10 w-full h-full object-cover rounded-2xl shadow-2xl border border-brand-border"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute -bottom-6 -left-6 z-20 bg-brand-card p-6 rounded-xl border border-brand-border shadow-xl max-w-xs hidden md:block">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
-              <p className="text-xs text-gray-400 uppercase tracking-widest">Análise Financeira</p>
+        {/* Lado Direito - Imagem Impactante */}
+        <div className="relative group">
+          <div className="absolute inset-0 bg-brand-green/20 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+          <div className="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card shadow-2xl">
+            <img 
+              src="https://drive.google.com/thumbnail?id=1cNiBhh4Fnbps6Dbb6V2Zemcm7p2Z9AzK&sz=w1000" 
+              alt="Análise de gastos" 
+              className="w-full h-auto object-cover opacity-100"
+            />
+            
+            {/* Overlay de "Falha no Sistema" */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/90 to-transparent">
+              <div className="flex items-center gap-2 text-red-500 font-mono text-sm mb-1">
+                <AlertTriangle size={14} />
+                <span>ALERTA DE PREJUÍZO</span>
+              </div>
+              <p className="text-white font-bold">Seu saldo atual não reflete seu esforço.</p>
             </div>
-            <p className="font-mono text-sm">
-              &gt; Gastos invisíveis detectados.<br/>
-              &gt; Oportunidade de otimização.
-            </p>
           </div>
         </div>
       </div>

@@ -1,92 +1,85 @@
 import React from 'react';
 import { Section } from './Section';
 import { Button } from './Button';
-import { CheckCircle2, Lock } from 'lucide-react';
+import { Check, Lock, Smartphone } from 'lucide-react';
 
 interface PricingProps {
   onCtaClick: () => void;
 }
 
-const inclusions = [
-  "Acesso Vitalício ao App 10k em Silêncio",
-  "Mini App 1: Empilhador de Dinheiro",
-  "Mini App 2: Detector de Ralos",
-  "Mini App 3: Calculadora de Metas",
-  "Mini App 4: Guardião do Bolso",
-  "Mini App 5: Gerador de NÃO Financeiro",
-  "Bônus: Atualizações Futuras"
-];
-
 export const Pricing: React.FC<PricingProps> = ({ onCtaClick }) => {
   return (
-    <Section id="pricing" className="pt-0 pb-12">
-      {/* Value Anchor */}
-      <div className="max-w-3xl mx-auto mb-16 bg-white/5 rounded-2xl p-8 border border-white/10 text-center backdrop-blur-sm">
-        <h3 className="text-2xl font-bold mb-6">Faça as contas…</h3>
-        <div className="space-y-3 text-left md:text-center text-gray-300 mb-8 font-mono text-sm md:text-base">
-          <p className="flex justify-between md:justify-center gap-4 border-b border-dashed border-gray-700 pb-2">
-            <span>Um app de controle financeiro comum:</span> <span className="text-red-400">R$ 199,90/ano</span>
-          </p>
-          <p className="flex justify-between md:justify-center gap-4 border-b border-dashed border-gray-700 pb-2">
-            <span>Um coach financeiro:</span> <span className="text-red-400">R$ 300,00 por sessão</span>
-          </p>
-          <p className="flex justify-between md:justify-center gap-4 pb-2">
-            <span>Continuar perdendo dinheiro todo mês:</span> <span className="text-red-500 font-bold">Incalculável</span>
-          </p>
-        </div>
-        <p className="text-lg italic mb-2">Você pode ter acesso às 5 ferramentas agora por um valor simbólico.</p>
-        <p className="text-xl font-bold text-white">
-          Hoje, você garante o Pack Completo por apenas <span className="text-brand-green text-3xl">R$ 17,00</span>.
-        </p>
-      </div>
-
-      {/* Main Stack */}
-      <div className="max-w-md mx-auto bg-brand-card border-2 border-brand-green rounded-3xl overflow-hidden shadow-[0_0_50px_-10px_rgba(0,208,94,0.3)] relative">
-        <div className="bg-brand-green p-4 text-center">
-          <h3 className="text-black font-black text-xl uppercase tracking-wider">Oferta Especial</h3>
-        </div>
+    <Section id="pricing" className="pt-10 pb-24">
+      
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         
-        <div className="p-8">
-          
-          {/* Product Mockup Image */}
-          <div className="mb-8 flex justify-center">
-            <img 
-              src="https://drive.google.com/thumbnail?id=1a9VjG8ACuzS2pmCr7UULPSdxwGGIIz1s&sz=w1000" 
-              alt="Pack 10k em Silêncio Mockup" 
-              className="w-full max-w-[280px] h-auto rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-
-          <p className="text-center text-gray-400 text-sm mb-6 uppercase tracking-widest font-semibold">
-            Você recebe acesso imediato a:
+        {/* Left Side: The Value Stack (Logic) */}
+        <div className="order-2 lg:order-1">
+          <h3 className="font-display text-3xl font-bold text-white mb-6">
+            O preço da ignorância é alto.
+          </h3>
+          <p className="text-gray-400 mb-8">
+            Você pode continuar tentando sozinho, baixando planilhas gratuitas que ninguém usa e vendo seu dinheiro desaparecer dia 20 de todo mês. Ou pode pagar o preço de um lanche para resolver isso para sempre.
           </p>
-          
-          <ul className="space-y-4 mb-8">
-            {inclusions.map((item, i) => (
-              <li key={i} className="flex items-center text-sm md:text-base">
-                <CheckCircle2 className="text-brand-green min-w-[20px] w-5 h-5 mr-3" />
-                <span className="text-gray-200">{item}</span>
-              </li>
-            ))}
-          </ul>
 
-          <div className="text-center mb-8">
-            <span className="text-gray-500 line-through text-lg">De R$ 497,00</span>
-            <div className="text-4xl md:text-5xl font-black text-white mt-2">
-              R$ 17,00
+          <div className="space-y-4 bg-white/5 p-6 rounded-xl border border-white/10">
+            <div className="flex justify-between items-center text-sm text-gray-400 border-b border-white/5 pb-3">
+              <span>App de Finanças "Premium"</span>
+              <span className="line-through decoration-red-500">R$ 199,90/ano</span>
             </div>
-            <span className="text-brand-green text-sm font-bold">pagamento único</span>
-          </div>
-
-          <Button fullWidth pulse className="text-xl mb-4" onClick={onCtaClick}>
-            LIBERAR MEU ACESSO
-          </Button>
-          
-          <div className="flex items-center justify-center gap-2 text-xs text-gray-500">
-            <Lock size={12} /> Pagamento 100% Seguro
+            <div className="flex justify-between items-center text-sm text-gray-400 border-b border-white/5 pb-3">
+              <span>Livros de "Mindset"</span>
+              <span className="line-through decoration-red-500">R$ 89,90</span>
+            </div>
+            <div className="flex justify-between items-center text-lg font-bold text-white pt-2">
+              <span>Protocolo 10K (Vitalício)</span>
+              <span className="text-brand-green">HOJE: R$ 17,00</span>
+            </div>
           </div>
         </div>
+
+        {/* Right Side: The Offer Card (Emotion) */}
+        <div className="order-1 lg:order-2 relative">
+          {/* Neon Glow Behind */}
+          <div className="absolute inset-0 bg-brand-green blur-[60px] opacity-20"></div>
+
+          <div className="relative bg-[#0F0F0F] border border-brand-green rounded-3xl overflow-hidden shadow-2xl shadow-brand-green/20">
+            
+            {/* Header */}
+            <div className="bg-brand-green p-3 text-center">
+              <span className="text-black font-black text-xs uppercase tracking-[0.2em]">Oferta por Tempo Limitado</span>
+            </div>
+
+            <div className="p-8 text-center">
+              <div className="inline-block p-4 rounded-full bg-brand-green/10 mb-4 animate-float">
+                 <Smartphone className="w-10 h-10 text-brand-green" />
+              </div>
+              
+              <h2 className="font-display font-black text-5xl text-white mb-2">R$ 17<span className="text-2xl text-gray-500 font-normal">,00</span></h2>
+              <p className="text-gray-400 text-sm mb-8">Pagamento único • Acesso Vitalício</p>
+
+              <div className="space-y-3 mb-8 text-left max-w-xs mx-auto">
+                {["Acesso Imediato ao App", "As 5 Ferramentas Blindadas", "Atualizações Gratuitas", "Garantia de 7 Dias"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="bg-brand-green/20 p-1 rounded-full">
+                      <Check size={12} className="text-brand-green" />
+                    </div>
+                    <span className="text-gray-300 text-sm font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Button onClick={onCtaClick} fullWidth pulse className="mb-4 text-lg">
+                QUERO MEU ACESSO AGORA
+              </Button>
+
+              <div className="flex items-center justify-center gap-2 text-[10px] text-gray-500 uppercase tracking-widest">
+                <Lock size={10} /> Compra 100% Segura e Criptografada
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </Section>
   );

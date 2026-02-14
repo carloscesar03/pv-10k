@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
+import { ShieldAlert, ChevronDown } from 'lucide-react';
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -7,32 +8,48 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   return (
-    <div className="relative bg-hero-pattern bg-cover bg-center min-h-[90vh] flex items-center justify-center">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-[#050505]"></div>
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-brand-dark pt-10 pb-20">
       
-      <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
-        <div className="inline-block mb-4 px-4 py-1 rounded-full border border-brand-green/30 bg-brand-green/10 text-brand-green text-sm font-bold tracking-widest uppercase animate-fade-in-up">
-          Método de Organização Financeira
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-20 grid-bg pointer-events-none"></div>
+      
+      {/* Spotlight Effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-green/20 blur-[120px] rounded-full pointer-events-none opacity-40"></div>
+
+      <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl flex flex-col items-center">
+        
+        {/* Warning Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs md:text-sm font-bold tracking-widest uppercase mb-8 animate-fade-in-up backdrop-blur-sm">
+          <ShieldAlert size={16} />
+          Atenção: Não ignore este aviso
         </div>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight glow-text">
-          PLANEJE SEUS PRIMEIROS <span className="text-brand-green">10 MIL REAIS</span>
+        {/* Headline */}
+        <h1 className="font-display font-black text-4xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6 tracking-tight">
+          O SEU DINHEIRO NÃO ESTÁ SUMINDO. <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-400 glow-text">ELE ESTÁ SENDO ROUBADO.</span>
         </h1>
         
-        <p className="text-lg md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Um protocolo prático para organizar suas finanças em até <strong className="text-white">12 meses</strong>. <br className="hidden md:block"/>
-          Otimize sua renda atual, elimine gastos invisíveis e construa sua reserva com discrição e segurança.
+        {/* Subheadline */}
+        <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+          Existe um <strong className="text-white">protocolo invisível</strong> que os bancos usam para drenar seu salário em 5 dias. Nós criamos a ferramenta para bloquear isso e forçar seus primeiros <span className="text-brand-green font-bold">10k na conta</span>.
         </p>
         
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-          <Button onClick={onCtaClick} pulse className="text-lg px-10 py-5 w-full md:w-auto shadow-lg shadow-brand-green/20">
-            QUERO ACESSAR AS FERRAMENTAS
+        {/* CTA */}
+        <div className="w-full max-w-md flex flex-col gap-4">
+          <Button onClick={onCtaClick} pulse showIcon className="text-lg w-full">
+            ATIVAR PROTOCOLO 10K
           </Button>
+          <p className="text-xs text-gray-600 uppercase tracking-widest font-mono">
+            Acesso liberado para apenas 50 usuários hoje
+          </p>
         </div>
-        
-        <p className="mt-4 text-xs text-gray-500 uppercase tracking-widest">
-          Acesso Imediato • Compra Segura
-        </p>
+
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 animate-bounce text-gray-600">
+        <ChevronDown size={32} />
       </div>
     </div>
   );

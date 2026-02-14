@@ -8,17 +8,19 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
       },
       colors: {
         brand: {
-          green: '#00D05E',
-          dark: '#0a0a0a',
-          card: '#121212',
-          border: '#1F1F1F'
+          green: '#00FF66',
+          dark: '#050505',
+          card: '#0F0F0F',
+          border: '#222222',
+          accent: '#112211'
         }
       },
       backgroundImage: {
-        'hero-pattern': "linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.95)), url('https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=1920&auto=format&fit=crop')",
+        'grid-pattern': "linear-gradient(to right, #111 1px, transparent 1px), linear-gradient(to bottom, #111 1px, transparent 1px)",
       }
     },
   },

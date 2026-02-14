@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Protocolo 10k em Silêncio - Gestão Financeira</title>
-    <meta name="description" content="Sistema de organização financeira e blindagem comportamental. Ferramentas práticas para quem deseja assumir o controle do dinheiro e criar reservas." />
+    <title>Protocolo 10k em Silêncio - O Fim da Fragilidade Financeira</title>
+    <meta name="description" content="Não é sobre cortar o cafezinho. É sobre hackear o sistema que te mantém pobre. Acesse o protocolo agora." />
     
     <!-- Facebook Domain Verification -->
     <meta name="facebook-domain-verification" content="97b59ttweb1gg0tsu2x1kirazi2mvo" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     
     <!-- ========================================== -->
     <!-- ÁREA DO PIXEL DO FACEBOOK / META ADS       -->
@@ -40,17 +40,29 @@
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
             },
             colors: {
               brand: {
-                green: '#00D05E',
-                dark: '#0a0a0a',
-                card: '#121212',
-                border: '#1F1F1F'
+                green: '#00FF66', // Mais neon/agressivo
+                dark: '#050505',
+                card: '#0F0F0F',
+                border: '#222222',
+                accent: '#112211'
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
               }
             },
             backgroundImage: {
-              'hero-pattern': "linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.95)), url('https://images.unsplash.com/photo-1616077168079-7e09a677fb2c?q=80&w=1920&auto=format&fit=crop')",
+              'grid-pattern': "linear-gradient(to right, #111 1px, transparent 1px), linear-gradient(to bottom, #111 1px, transparent 1px)",
             }
           }
         }
@@ -58,16 +70,19 @@
     </script>
 
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
       body {
         background-color: #050505;
         color: #e5e5e5;
         margin: 0;
+        overflow-x: hidden;
       }
       .glow-text {
-        text-shadow: 0 0 20px rgba(0, 208, 94, 0.3);
+        text-shadow: 0 0 30px rgba(0, 255, 102, 0.4);
+      }
+      .grid-bg {
+        background-size: 40px 40px;
+        mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
       }
     </style>
     
@@ -83,9 +98,10 @@
       }
     }
     </script>
-  </head>
+  <link rel="stylesheet" href="/index.css">
+</head>
   <body>
-    <!-- Meta Pixel Code (noscript) movido para o body para compatibilidade com Vercel/HTML5 -->
+    <!-- Meta Pixel Code (noscript) -->
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=2114828405998770&amp;ev=PageView&amp;noscript=1"
     /></noscript>

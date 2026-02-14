@@ -2,6 +2,7 @@ import React from 'react';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
 import { ProblemSection } from './components/ProblemSection';
+import { Testimonials } from './components/Testimonials';
 import { TargetAudience } from './components/TargetAudience';
 import { BonusesSection } from './components/BonusesSection';
 import { Pricing } from './components/Pricing';
@@ -40,6 +41,9 @@ const App: React.FC = () => {
       <Features />
 
       <ProblemSection onCtaClick={handleCheckout} />
+
+      {/* Seção de Prova Social inserida estrategicamente aqui */}
+      <Testimonials />
 
       <TargetAudience />
 
