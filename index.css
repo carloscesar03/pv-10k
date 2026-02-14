@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base */
 html {
   scroll-behavior: smooth;
 }
@@ -7,6 +12,7 @@ body {
   color: #e5e5e5;
 }
 
+/* Custom Effects */
 .glow-text {
   text-shadow: 0 0 20px rgba(0, 208, 94, 0.3);
 }
